@@ -6,7 +6,7 @@ require_once __DIR__ . "/vendor/autoload.php";
 
 // Membaca file .env
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/");
-$dotenv->load();
+$dotenv->safeload();
 
 $api_key = $_ENV["NEWSAPIKEY"] ?? "";
 $hasil = null;
